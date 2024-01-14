@@ -1,6 +1,6 @@
 package com.leetcode.cn.solution1_50;
 
-public class Solution4 {
+public class Solution04 {
 
     public double findMedianSortedArrays1(int[] nums1, int[] nums2) {
         int length1 = nums1.length;

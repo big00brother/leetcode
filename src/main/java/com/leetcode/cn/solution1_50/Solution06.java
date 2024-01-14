@@ -1,6 +1,6 @@
 package com.leetcode.cn.solution1_50;
 
-public class Solution6 {
+public class Solution06 {
     public String convert1(String s, int numRows) {
         if (numRows == 1) {
             return s;
