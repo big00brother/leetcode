@@ -33,8 +33,9 @@ public class Solution10_2 {
             // pi的位置是'.'
             return process(s, p, si + 1, pi + 1);
         }
-        // 设pi位置的字符为c，pi+1位置的字符为'*'，process为true时，认为匹配了0个c。
+        // 设pi位置的字符为c，pi+1位置的字符为'*'，process为true时，认为匹配了0个c；process为false时，认为匹配了1...n个c
         if (!process(s, p, si, pi + 2)) {
+            // pi位置的字符为'.' 或者 si位置的字符等于pi位置的字符。每次si++，代表匹配了一个c
             while (si < s.length && (p[pi] == '.' || s[si] == p[pi])) {
                 si++;
                 if (process(s, p, si, pi + 2)) {
