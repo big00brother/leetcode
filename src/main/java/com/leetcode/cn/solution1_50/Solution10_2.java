@@ -24,13 +24,13 @@ public class Solution10_2 {
         if (pi == p.length) {
             return si == s.length;
         }
-        // pi在最后一个字符位置 或者 pi+1位置的字符不等于'*'
+        // pi是最后一个字符位置 或者 pi+1位置的字符不等于'*'
         if (pi == p.length - 1 || p[pi + 1] != '*') {
             // si匹配完了 或者 （pi位置的字符不是'.'并且pi位置的字符不等于si位置的字符）
             if (si == s.length || (p[pi] != '.' && p[pi] != s[si])) {
                 return false;
             }
-            // pi的位置是'.'
+            // pi的位置是'.' 或者 pi位置的字符等于si位置的字符
             return process(s, p, si + 1, pi + 1);
         }
         // 设pi位置的字符为c，pi+1位置的字符为'*'，process为true时，认为匹配了0个c；process为false时，认为匹配了1...n个c
