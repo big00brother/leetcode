@@ -17,7 +17,7 @@ class ListNode {
     }
 }
 
-public class Solution2 {
+public class Solution02 {
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         if (l1 == null) {
