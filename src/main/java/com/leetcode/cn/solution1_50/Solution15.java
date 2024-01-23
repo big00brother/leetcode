@@ -30,10 +30,6 @@ public class Solution15 {
                 }
                 if (map.containsKey(-nums[i] - nums[j]) && map.get(-nums[i] - nums[j]) > j) {
                     List<Integer> list1 = new ArrayList<>();
-                    StringBuilder bd = new StringBuilder();
-                    bd.append(nums[i]);
-                    bd.append(nums[j]);
-                    String s = bd.toString();
                     list1.add(nums[i]);
                     list1.add(nums[j]);
                     list1.add(-nums[i] - nums[j]);
