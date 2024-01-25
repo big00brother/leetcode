@@ -15,8 +15,10 @@ public class Solution17 {
         return list;
     }
 
+    // dfs遍历。bd存储组合的字符串；str为字母数组，对应索引为数字；list是结果集；digits是数字字符串；i为遍历深度。
     public void letterCore(StringBuilder bd, String[] str, List<String> list, String digits, int i) {
-        if (i >= digits.length()) {
+        // 当遍历深度与数字字符串长度相等时，list添加组合字符串，dfs遍历结束
+        if (i == digits.length()) {
             list.add(bd.toString());
             return;
         }
