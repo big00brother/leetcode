@@ -17,6 +17,7 @@ public class Solution24 {
         while (true) {
             ListNode nextPreNode = node.next;
             node.next = preNode;
+            //nextPreNode后面不再有结点
             if (nextPreNode == null || nextPreNode.next == null) {
                 preNode.next = nextPreNode;
                 break;
