@@ -31,7 +31,7 @@ public class Solution39 {
                 curNums.remove(curNums.size() - 1);
                 return;
             }
-            // 当前参与计算的数字之和大于target，直接跳出当前dfs
+            // 当前参与计算的数字之和大于target，直接跳出当前dfs（因为数组都是正数，所以不会越加越小）
             if (curSum + candidates[i] > target) {
                 return;
             }
