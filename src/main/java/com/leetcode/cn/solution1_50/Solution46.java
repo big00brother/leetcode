@@ -14,6 +14,7 @@ public class Solution46 {
         return permutations;
     }
 
+    // flag记录已选择数字位置，depth是dfs深度，permutation是当前排列，permutations是总的排列结果集
     public void dfs(int[] nums, boolean[] flags, int depth, List<Integer> permutation, List<List<Integer>> permutations) {
         if (depth == nums.length) {
             permutations.add(new ArrayList<>(permutation));
@@ -26,6 +27,7 @@ public class Solution46 {
             flags[i] = true;
             permutation.add(nums[i]);
             dfs(nums, flags, depth + 1, permutation, permutations);
+            // 下一层dfs完成时，记得将当前排列的队尾元素移除，并将flag[i]置为false
             permutation.remove(permutation.size() - 1);
             flags[i] = false;
         }
