@@ -6,11 +6,11 @@ public class Solution48 {
         if (matrix == null || matrix.length == 0) {
             return;
         }
-        // 左上角位置
+        // 记录左上、左下、右上、右下角的边界
         int tR = 0, tC = 0;
-        // 右下角位置
         int dR = matrix.length - 1, dC = matrix[0].length - 1;
         while (tR < dR) {
+            // 每次遍历完成后，左上、左下、右上、右下角围成的圈往内缩
             rotateEdge(matrix, tR++, tC++, dR--, dC--);
         }
     }
