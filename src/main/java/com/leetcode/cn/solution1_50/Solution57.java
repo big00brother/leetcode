@@ -8,6 +8,7 @@ public class Solution57 {
     public int[][] insert(int[][] intervals, int[] newInterval) {
         int left = newInterval[0];
         int right = newInterval[1];
+        // 判断新区间newInterval合并后是否被插入过，若newInterval合并完成后在intervals末尾，需要将合并后的区间插入一次
         boolean placed = false;
         List<int[]> ansList = new ArrayList<int[]>();
         for (int[] interval : intervals) {
