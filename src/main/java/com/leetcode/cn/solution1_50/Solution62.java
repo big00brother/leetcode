@@ -22,7 +22,9 @@ public class Solution62 {
     }
 
     public int uniquePaths02(int m, int n) {
+        // 取m和n之中的较小值，减少计算排列组合的次数。
         int small = Math.min(m, n) - 1;
+        // 类型取double防止相乘的最终结果超出类型范围
         double a = 1;
         double b = 1;
         int total = m + n - 2;
