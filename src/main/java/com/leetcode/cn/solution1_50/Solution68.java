@@ -8,12 +8,12 @@ public class Solution68 {
     public List<String> fullJustify(String[] words, int maxWidth) {
         List<String> list = new ArrayList<>();
         int i = 0;
-        // 记录当前行的宽度
+        // 记录当前行的单词长度
         int curWidth = 0;
         // 记录当前行的单词个数
         int curNums = 0;
         while (i < words.length) {
-            // 当前行宽度 + 下一个单词长度 + 当前行的单词数量（最少空格数量） < 最大宽度，说明可以把下一个单词加入当前行
+            // 当前行单词长度 + 下一个单词长度 + 当前行的单词数量（最少空格数量） < 最大宽度，说明可以把下一个单词加入当前行
             if (curWidth + words[i].length() + curNums <= maxWidth) {
                 curWidth += words[i].length();
                 curNums++;
